@@ -1,0 +1,16 @@
+models:
+  Video:
+    title: string
+    url: string
+    zip: numeric
+    relationships:
+      belongsTo: User
+
+controllers:
+  Video:
+    resource
+    store:
+      validate: title,zip,url
+
+seeders:
+  Video
