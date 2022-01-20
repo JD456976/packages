@@ -22,7 +22,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6">
-                                                    <div class="gen-tag-line"><span>Recent Video</span></div>
+                                                    <div class="gen-tag-line">
+                                                        @if ($video->is_featured == 1)
+                                                            <span style="color:gold;">&#129321; Featured Video &#129321;</span>
+                                                        @else
+                                                            <span>Recent Video</span>
+                                                        @endif
+                                                    </div>
                                                     <div class="gen-movie-info">
                                                         <a href="{{ route('video.show', $video->slug) }}"><h3>{{ $video->title }}</h3></a>
                                                     </div>

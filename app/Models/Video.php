@@ -28,6 +28,7 @@ class Video extends Model implements Viewable, HasMedia
         'slug',
         'content',
         'zip',
+        'is_featured',
     ];
 
     /**

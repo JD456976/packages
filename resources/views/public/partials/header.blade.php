@@ -8,7 +8,7 @@
                             <img class="img-fluid logo" src="/images/logo-1.png" alt="streamlab-image">
                         </a>
                         <div class="row ml-auto">
-                            <h2>Catching thieves, one delivery at a time!</h2>
+                            <h2>Catching thieves...</h2>
                         </div>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <div id="gen-menu-contain" class="gen-menu-contain">
@@ -26,6 +26,9 @@
                                             </li>
                                         </ul>
                                         @endcan
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('video.index') }}">Videos</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('about') }}">About
