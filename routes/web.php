@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+ * Home Routes
+ */
+
 Route::get('/', [
     'as' => 'home',
     'uses' => 'App\Http\Controllers\HomeController@index',
@@ -45,6 +49,10 @@ Route::get('user/videos/{id}', [
     'uses' => 'App\Http\Controllers\UserController@videos',
 ]);
 
+/*
+ * Video Routes
+ */
+
 
 Route::resource('video', App\Http\Controllers\VideoController::class);
 Route::get('video/tag/{tag}', [
@@ -55,9 +63,9 @@ Route::get('search/{query}', [
     'uses' => 'App\Http\Controllers\VideoController@search',]);
 Route::post('comment/{comment}', [
     'as' => 'comment',
-    'uses' => 'App\Http\Controllers\VideoController@comment',]);
+    'uses' => 'App\Http\Controllers\VideoController@comment',])->middleware(['auth']);
 
-/**
+/*
  * Admin Routes
  */
 
