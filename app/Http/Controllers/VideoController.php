@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 use Stevebauman\Location\Facades\Location;
-use Arcanedev\NoCaptcha\Rules\CaptchaRule;
 
 
 class VideoController extends Controller
