@@ -32,7 +32,8 @@ class CommentPosted extends Mailable
     public function build()
     {
         return $this->markdown('emails.comments.posted', [
-            'url' => 'video/' . $this->video->slug,
+            'url' => route('viedo.show', $this->video->slug),
+            'profile' => route('user.show', $this->video->user->id)
         ]);
     }
 }

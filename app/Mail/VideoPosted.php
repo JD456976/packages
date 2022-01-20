@@ -34,8 +34,8 @@ class VideoPosted extends Mailable
     public function build()
     {
         return $this->markdown('emails.videos.posted', [
-            'url' => 'video/' . $this->video->slug,
-            'user' => $this->user
+            'url' => route('viedo.show', $this->video->slug),
+            'profile' => route('user.show', $this->video->user->id)
         ]);
     }
 }
