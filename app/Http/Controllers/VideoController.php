@@ -63,7 +63,10 @@ class VideoController extends Controller
             ->addMedia($request->file)
             ->toMediaCollection('videos');
 
+
         $video->save();
+
+        (Video::count() == 0) ? $video->setStatus('pending') : $video->setStatus('approved');
 
         if (!empty($request->tags))
         {
