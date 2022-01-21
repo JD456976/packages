@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         {{ Auth::user()->name }} 's Profile
     </x-slot>
@@ -112,4 +112,4 @@
             </div>
         </div>
     </Section>
-</x-layout>
+</x-frontend.layout>

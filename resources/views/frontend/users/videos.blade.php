@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         {{ Auth::user()->name }}'s Videos
     </x-slot>
@@ -71,4 +71,4 @@
         </div>
     </section>
     <!-- Load More -->
-</x-layout>
+</x-frontend.layout>

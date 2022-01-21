@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Upload Your Video
     </x-slot>
@@ -87,4 +87,4 @@
         </div>
     </section>
     <!-- Log-in  -->
-</x-layout>
+</x-frontend.layout>

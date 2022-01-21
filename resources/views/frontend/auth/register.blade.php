@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Register
     </x-slot>
@@ -68,4 +68,4 @@
         </div>
     </section>
     <!-- register -->
-</x-layout>
+</x-frontend.layout>

@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Contact Us
     </x-slot>
@@ -82,4 +82,4 @@
         </div>
     </Section>
     <!-- Map End -->
-</x-layout>
+</x-frontend.layout>

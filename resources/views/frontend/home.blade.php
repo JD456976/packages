@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Welcome
     </x-slot>
@@ -155,4 +155,4 @@
         </div>
     </section>
     <!-- owl-carousel Videos Section-1 End -->
-</x-layout>
+</x-frontend.layout>

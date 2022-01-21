@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         About Us
     </x-slot>
@@ -92,4 +92,4 @@
         </div>
     </section>
     <!-- Blog-left-Sidebar -->
-</x-layout>
+</x-frontend.layout>

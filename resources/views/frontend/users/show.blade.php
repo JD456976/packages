@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Videos uploaded by {{ $user->username }}
     </x-slot>
@@ -64,4 +64,4 @@
             </div>
     </section>
     <!-- Infinite-Scroll -->
-</x-layout>
+</x-frontend.layout>

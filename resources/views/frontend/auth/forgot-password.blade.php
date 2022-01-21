@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Forgot Password
     </x-slot>
@@ -42,4 +42,4 @@
         </div>
     </section>
     <!-- register -->
-</x-layout>
+</x-frontend.layout>

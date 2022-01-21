@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         {{ $video->title }}
     </x-slot>
@@ -165,4 +165,4 @@
                 </div><!-- /.content-area --></div>
         </div>
     </div>
-</x-layout>
+</x-frontend.layout>

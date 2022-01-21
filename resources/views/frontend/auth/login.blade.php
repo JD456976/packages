@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Login
     </x-slot>
@@ -60,4 +60,4 @@
         </div>
     </section>
     <!-- Log-in  -->
-</x-layout>
+</x-frontend.layout>

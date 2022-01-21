@@ -1,4 +1,4 @@
-<x-layout>
+<x-frontend.layout>
     <x-slot name="title">
         Videos tagged with: {{ $tag }}
     </x-slot>
@@ -63,4 +63,4 @@
         </div>
     </section>
     <!-- Infinite-Scroll -->
-</x-layout>
+</x-frontend.layout>
