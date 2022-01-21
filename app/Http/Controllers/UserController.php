@@ -53,7 +53,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('public.users.show', compact('user'));
+        return view('frontend.users.show', compact('user'));
     }
 
     /**
@@ -67,7 +67,7 @@ class UserController extends Controller
         $location = Location::get();
         $videos = Video::where('id',$id)->get();
         $user = User::find($id);
-        return view('public.users.edit', compact('user','videos','location'));
+        return view('frontend.users.edit', compact('user','videos','location'));
     }
 
     /**
@@ -119,6 +119,6 @@ class UserController extends Controller
     {
         $videos = Video::where('user_id',$id)->get();
 
-        return view('public.users.videos', compact('videos'));
+        return view('frontend.users.videos', compact('videos'));
     }
 }

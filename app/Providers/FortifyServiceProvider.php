@@ -49,23 +49,23 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         Fortify::loginView(function () {
-            return view('public.auth.login');
+            return view('frontend.auth.login');
         });
 
         Fortify::registerView(function () {
-            return view('public.auth.register');
+            return view('frontend.auth.register');
         });
 
         Fortify::requestPasswordResetLinkView(function () {
-            return view('public.auth.forgot-password');
+            return view('frontend.auth.forgot-password');
         });
 
         Fortify::resetPasswordView(function ($request) {
-            return view('public.auth.reset-password', ['request' => $request]);
+            return view('frontend.auth.reset-password', ['request' => $request]);
         });
 
         Fortify::confirmPasswordView(function () {
-            return view('public.auth.confirm-password');
+            return view('frontend.auth.confirm-password');
         });
 
         $this->app->instance(LogoutResponse::class, new class implements LogoutResponse {

@@ -25,7 +25,7 @@ class VideoController extends Controller
     {
         $videos = Video::all();
 
-        return view('public.videos.index', compact('videos'));
+        return view('frontend.videos.index', compact('videos'));
     }
 
     /**
@@ -37,7 +37,7 @@ class VideoController extends Controller
         if (Auth::check()) {
             $location = Location::get();
 
-            return view('public.videos.create', compact('location'));
+            return view('frontend.videos.create', compact('location'));
         }
         else {
             Alert::error('Whoops!', 'You must be logged in to upload a video.');
@@ -92,7 +92,7 @@ class VideoController extends Controller
 
         views($video)->record();
 
-        return view('public.videos.show', compact('video','comments','related'));
+        return view('frontend.videos.show', compact('video','comments','related'));
     }
 
     /**
@@ -103,7 +103,7 @@ class VideoController extends Controller
     public function edit(Request $request, Video $video)
     {
         $location = Location::get();
-        return view('public.videos.edit', compact('video','location'));
+        return view('frontend.videos.edit', compact('video','location'));
     }
 
     /**
@@ -147,14 +147,14 @@ class VideoController extends Controller
     {
         $videos = Video::withAnyTags(['tag' => $tag])->get();
 
-        return view('public.videos.tag', compact('videos','tag'));
+        return view('frontend.videos.tag', compact('videos','tag'));
     }
 
     public function search($query)
     {
         $videos = Video::where('zip', $query)->get();
 
-        return view('public.search', compact('videos', 'query'));
+        return view('frontend.search', compact('videos', 'query'));
     }
 
     public function comment(CommentRequest $request, $video)
