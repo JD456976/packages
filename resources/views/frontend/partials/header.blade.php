@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="{{ route('home') }}">
-                            <img class="img-fluid logo" src="/images/logo-1.png" alt="streamlab-image">
+                            <img class="img-fluid logo" src="assets/frontend/images/logo-1.png" alt="streamlab-image">
                         </a>
                         <div class="row ml-auto">
                             <h2>Catching thieves...</h2>

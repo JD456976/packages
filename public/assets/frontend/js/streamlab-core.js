@@ -7,7 +7,7 @@ Design and Developed by: Gentechtree
 /*================================================
 [  Table of contents  ]
 ================================================
-==> Check Scrollbale 
+==> Check Scrollbale
 ==>  Register Venoor Js Dependancies
 ==>  CountDown
 ==>  Slick Slider
@@ -22,7 +22,7 @@ Design and Developed by: Gentechtree
     "use strict";
 
     /*==============================================
-    Check Scrollbale 
+    Check Scrollbale
     ===============================================*/
     function isScrollable(jQuerywrapper) {
         var ajaxVisible = jQuerywrapper.offset().top + jQuerywrapper.outerHeight(true),
@@ -38,14 +38,14 @@ Design and Developed by: Gentechtree
     var registerDependencies = function() {
             var PluginJsConfig = {
                 "js_dependencies": {
-                    "asyncloader.js": "js/vendor/asyncloader.js",
-                    "asyncloader": "js/asyncloader.min.js?ver=1.0",
-                    "circle-progress": "js/circle-progress.min.js?ver=1.0",
-                    "isotope.pkgd": "js/isotope.pkgd.min.js?ver=1.0",
-                    "jquery.countTo": "js/jquery.countTo.min.js?ver=1.0",
-                    "jquery.magnific-popup": "js/jquery.magnific-popup.min.js?ver=1.0",
-                    "owl.carousel": "js/owl.carousel.min.js?ver=1.0",
-                    "slick": "js/slick.min.js?ver=1.0"
+                    "asyncloader.js": "assets/frontend/js/vendor/asyncloader.js",
+                    "asyncloader": "assets/frontend/js/asyncloader.min.js?ver=1.0",
+                    "circle-progress": "assets/frontend/js/circle-progress.min.js?ver=1.0",
+                    "isotope.pkgd": "assets/frontend/js/isotope.pkgd.min.js?ver=1.0",
+                    "jquery.countTo": "assets/frontend/js/jquery.countTo.min.js?ver=1.0",
+                    "jquery.magnific-popup": "assets/frontend/js/jquery.magnific-popup.min.js?ver=1.0",
+                    "owl.carousel": "assets/frontend/js/owl.carousel.min.js?ver=1.0",
+                    "slick": "assets/frontend/js/slick.min.js?ver=1.0"
                 }
             };
             if (null != PluginJsConfig && null != PluginJsConfig.js_dependencies) {
