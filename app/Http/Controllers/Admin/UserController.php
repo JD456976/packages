@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Events\UserBanned;
+use App\Events\UserUnbanned;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminUserUpdateRequest;
 use App\Models\User;
@@ -110,6 +112,8 @@ class UserController extends Controller
         $user->is_banned = 1;
         $user->update();
 
+        event(new UserBanned($user));
+
         Alert::success('Success!', $user->name . ' was banned!');
 
         return redirect()->back();
@@ -121,6 +125,8 @@ class UserController extends Controller
 
         $user->is_banned = 0;
         $user->update();
+
+        event(new UserUnbanned($user));
 
         Alert::success('Success!', $user->name . ' was unbanned!');
 

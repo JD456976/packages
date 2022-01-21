@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\FirstVideoPosted;
 use App\Events\VideoPosted;
 use App\Http\Requests\CommentRequest;
 use App\Http\Requests\VideoStoreRequest;
@@ -63,10 +64,17 @@ class VideoController extends Controller
             ->addMedia($request->file)
             ->toMediaCollection('videos');
 
-
         $video->save();
 
-        (Video::count() == 0) ? $video->setStatus('pending') : $video->setStatus('approved');
+        if(Video::count() <= 1)
+        {
+            $video->setStatus('pending');
+
+            event(new FirstVideoPosted($video->user));
+        }
+        else {
+            $video->setStatus('approved');
+        }
 
         if (!empty($request->tags))
         {
