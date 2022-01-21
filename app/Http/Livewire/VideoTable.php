@@ -13,15 +13,21 @@ class VideoTable extends DataTableComponent
     public function columns(): array
     {
         return [
-            Column::make('ID')
+            Column::make('ID','id')
+                ->sortable()
+                ->searchable(),
+            Column::make('Created By','user_id')
                 ->sortable()
                 ->searchable(),
             Column::make('Title' )
                 ->sortable()
                 ->searchable(),
+            Column::make('Slug' ),
             Column::make('Zip')
                 ->sortable()
                 ->searchable(),
+            Column::make('Featured', 'is_featured')
+                ->sortable(),
             Column::make('Created', 'created_at')
                 ->searchable()
                 ->sortable()

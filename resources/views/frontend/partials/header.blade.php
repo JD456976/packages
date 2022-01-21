@@ -15,16 +15,7 @@
                                 <ul id="gen-main-menu" class="navbar-nav ml-auto">
                                     <li class="menu-item active">
                                         @can('is-admin')
-                                        <a href="#" aria-current="page">Admin</a>
-                                        <i class="fa fa-chevron-down gen-submenu-icon"></i>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item active">
-                                                <a href="{{ route('admin.users') }}" aria-current="page">Users</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="{{ route('admin.videos') }}" aria-current="page">Videos</a>
-                                            </li>
-                                        </ul>
+                                        <a href="{{ route('admin.dashboard') }}" aria-current="page">Admin</a>
                                         @endcan
                                     </li>
                                     <li>

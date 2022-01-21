@@ -64,18 +64,3 @@ Route::get('search/{query}', [
 Route::post('comment/{comment}', [
     'as' => 'comment',
     'uses' => 'App\Http\Controllers\VideoController@comment',])->middleware(['auth']);
-
-/*
- * Admin Routes
- */
-
-Route::middleware(['admin', 'auth'])->group(function() {
-    Route::get('admin/users', [
-        'as'=> 'admin.users',
-        'uses' => 'App\Http\Controllers\AdminController@users',
-    ]);
-    Route::get('admin/videos', [
-        'as'=> 'admin.videos',
-        'uses' => 'App\Http\Controllers\AdminController@videos',
-    ]);
-});
