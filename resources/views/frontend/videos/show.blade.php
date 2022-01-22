@@ -50,6 +50,15 @@
                                                     @endforeach
                                                 @endif
                                             </li>
+                                            @can('is-admin')
+                                                <li>
+                                                    @if($video->is_approved == 0)
+                                                    <a href="{{ route('admin.videos.approve', $video->id) }}"><button class="btn-sm btn-primary">Approve</button></a>
+                                                    @else
+                                                    <a href="{{ route('admin.videos.unapprove', $video->id) }}"><button class="btn-sm btn-warning">Unapprove</button></a>
+                                                    @endif
+                                                </li>
+                                            @endcan
                                         </ul>
                                     </div>
                                     <div class="gen-excerpt">

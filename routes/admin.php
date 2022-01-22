@@ -37,4 +37,12 @@ Route::middleware(['admin', 'auth'])->group(function() {
         'as' => 'videos.unfeature',
         'uses' => 'App\Http\Controllers\Admin\VideoController@unfeature',
     ]);
+    Route::get('videos/unapprove/{id}', [
+        'as' => 'videos.unapprove',
+        'uses' => 'App\Http\Controllers\Admin\VideoController@unapprove',
+    ]);
+    Route::get('videos/approve/{id}', [
+        'as' => 'videos.approve',
+        'uses' => 'App\Http\Controllers\Admin\VideoController@approve',
+    ]);
 });

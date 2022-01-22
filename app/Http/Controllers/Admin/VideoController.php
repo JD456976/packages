@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Events\VideoApprovedEvent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminVideoUpdateRequest;
 use App\Models\Video;
@@ -122,5 +123,33 @@ class VideoController extends Controller
         Alert::success('Success!','Video Unfeatured!');
 
         return redirect(route('admin.videos.index'));
+    }
+
+    public function approve($id)
+    {
+        $video = Video::find($id);
+
+        $video->is_approved = 1;
+
+        $video->update();
+
+        event(new VideoApprovedEvent($video));
+
+        Alert::success('Success!','Video Approved!');
+
+        return redirect()->back();
+    }
+
+    public function unapprove($id)
+    {
+        $video = Video::find($id);
+
+        $video->is_approved = 0;
+
+        $video->update();
+
+        Alert::success('Success!','Video Unapproved!');
+
+        return redirect()->back();
     }
 }
