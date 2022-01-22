@@ -28,6 +28,8 @@ class VideoTable extends DataTableComponent
                 ->searchable(),
             Column::make('Featured', 'is_featured')
                 ->sortable(),
+            Column::make('Status', 'is_approved')
+                ->sortable(),
             Column::make('Created', 'created_at')
                 ->searchable()
                 ->sortable()

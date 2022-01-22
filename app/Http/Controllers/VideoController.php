@@ -55,6 +55,14 @@ class VideoController extends Controller
     {
         $video = new Video();
 
+        if(Video::count() <= 1)
+        {
+            event(new FirstVideoPosted($video->user));
+        }
+        else {
+            $video->is_approved = 1;
+        }
+
         $video->title = $request->title;
         $video->zip = $request->zip;
         $video->content = $request->content;
@@ -65,16 +73,6 @@ class VideoController extends Controller
             ->toMediaCollection('videos');
 
         $video->save();
-
-        if(Video::count() <= 1)
-        {
-            $video->setStatus('pending');
-
-            event(new FirstVideoPosted($video->user));
-        }
-        else {
-            $video->setStatus('approved');
-        }
 
         if (!empty($request->tags))
         {

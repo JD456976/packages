@@ -13,7 +13,11 @@ class AdminController extends Controller
     public function dashboard()
     {
         $pending = Video::pending();
-        dd($pending);
-        return view('admin.dashboard', compact('pending'));
+        $totalUsers = User::count();
+        $banned = User::banned();
+        $unbanned = User::unbanned();
+        $approved = Video::approved();
+
+        return view('admin.dashboard', compact('pending', 'totalUsers', 'banned', 'unbanned', 'approved'));
     }
 }

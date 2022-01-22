@@ -52,4 +52,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Video::class);
     }
+
+    public static function total()
+    {
+        return User::all()->count();
+    }
+
+    public static function banned()
+    {
+        return User::where('is_banned', 1)->count();
+    }
+
+    public static function unbanned()
+    {
+        return User::where('is_banned', 0)->count();
+    }
 }

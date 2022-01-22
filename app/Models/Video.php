@@ -14,11 +14,12 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Laravel\Scout\Searchable;
+use \Venturecraft\Revisionable\RevisionableTrait;
 
 
 class Video extends Model implements Viewable, HasMedia
 {
-    use HasFactory, InteractsWithViews, Sluggable, Taggable, InteractsWithMedia, HasComments, Searchable;
+    use HasFactory, InteractsWithViews, Sluggable, Taggable, InteractsWithMedia, HasComments, Searchable, RevisionableTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -43,6 +44,8 @@ class Video extends Model implements Viewable, HasMedia
     ];
 
     protected $removeViewsOnDelete = true;
+
+    protected $keepRevisionOf = ['title','zip','content'];
 
     public function sluggable(): array
     {
@@ -87,6 +90,11 @@ class Video extends Model implements Viewable, HasMedia
 
     public static function pending()
     {
+        return Video::where('is_approved', 0)->count();
+    }
 
+    public static function approved()
+    {
+        return Video::where('is_approved', 1)->count();
     }
 }

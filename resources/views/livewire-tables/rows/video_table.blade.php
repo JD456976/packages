@@ -30,5 +30,12 @@
 </x-livewire-tables::table.cell>
 
 <x-livewire-tables::table.cell>
+    @if($row->is_approved == 0)
+        <a href="{{ route('admin.videos.unfeature', $row->id) }}"><span class="badge badge-glow bg-success">Approve</span>
+        </a>
+    @endif
+</x-livewire-tables::table.cell>
+
+<x-livewire-tables::table.cell>
     {{ $row->created_at->diffForHumans() }}
 </x-livewire-tables::table.cell>

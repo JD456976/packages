@@ -29,7 +29,8 @@
         "softnweb/laravel-coming-soon": "^1.2",
         "spatie/laravel-comments": "^0.0.2",
         "spatie/laravel-medialibrary": "^9.0.0",
-        "stevebauman/location": "^6.2"
+        "stevebauman/location": "^6.2",
+        "venturecraft/revisionable": "^1.39"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
