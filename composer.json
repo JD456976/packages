@@ -29,7 +29,6 @@
         "softnweb/laravel-coming-soon": "^1.2",
         "spatie/laravel-comments": "^0.0.2",
         "spatie/laravel-medialibrary": "^9.0.0",
-        "spatie/laravel-model-status": "^1.10",
         "stevebauman/location": "^6.2"
     },
     "require-dev": {

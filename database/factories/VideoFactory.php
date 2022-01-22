@@ -30,6 +30,7 @@ class VideoFactory extends Factory
             'content' => $this->faker->paragraph(),
             'zip' => $this->faker->postcode,
             'is_featured' => $this->faker->boolean,
+            'is_approved' => $this->faker->boolean,
         ];
     }
 }

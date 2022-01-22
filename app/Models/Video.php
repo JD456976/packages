@@ -9,17 +9,16 @@ use CyrildeWit\EloquentViewable\Contracts\Viewable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Spatie\Comments\Models\Concerns\HasComments;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Laravel\Scout\Searchable;
-use Spatie\ModelStatus\HasStatuses;
+
 
 class Video extends Model implements Viewable, HasMedia
 {
-    use HasFactory, InteractsWithViews, Sluggable, Taggable, InteractsWithMedia, HasComments, Searchable, HasStatuses;
+    use HasFactory, InteractsWithViews, Sluggable, Taggable, InteractsWithMedia, HasComments, Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -83,6 +82,11 @@ class Video extends Model implements Viewable, HasMedia
 
     public static function count()
     {
-        return DB::table('videos')->where('user_id', Auth::user()->id)->count();
+        return Video::where('user_id', Auth::user()->id)->count();
+    }
+
+    public static function pending()
+    {
+
     }
 }

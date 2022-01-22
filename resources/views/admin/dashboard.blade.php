@@ -5,61 +5,72 @@
     <!-- Dashboard Analytics Start -->
     <section id="dashboard-analytics">
         <div class="row match-height">
-            <!-- Greetings Card starts -->
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="card card-congratulations">
-                    <div class="card-body text-center">
-                        <img src="{{ asset('assets/admin/app-assets/images/elements/decore-left.png') }}" class="congratulations-img-left" alt="card-img-left" />
-                        <img src="{{ asset('assets/admin/app-assets/images/elements/decore-right.png') }}" class="congratulations-img-right" alt="card-img-right" />
-                        <div class="avatar avatar-xl bg-primary shadow">
-                            <div class="avatar-content">
-                                <i data-feather="award" class="font-large-1"></i>
-                            </div>
+            <div class="col-xl-8 col-md-6 col-12">
+                <div class="card card-statistics">
+                    <div class="card-header">
+                        <h4 class="card-title">Statistics</h4>
+                        <div class="d-flex align-items-center">
+                            <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p>
                         </div>
-                        <div class="text-center">
-                            <h1 class="mb-1 text-white">Congratulations John,</h1>
-                            <p class="card-text m-auto w-75">
-                                You have done <strong>57.6%</strong> more sales today. Check your new badge in your profile.
-                            </p>
+                    </div>
+                    <div class="card-body statistics-body">
+                        <div class="row">
+                            <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
+                                <div class="d-flex flex-row">
+                                    <div class="avatar bg-light-primary me-2">
+                                        <div class="avatar-content">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up avatar-icon"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                        </div>
+                                    </div>
+                                    <div class="my-auto">
+                                        <h4 class="fw-bolder mb-0">{{ $pending }}</h4>
+                                        <p class="card-text font-small-3 mb-0">Sales</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-xl-0">
+                                <div class="d-flex flex-row">
+                                    <div class="avatar bg-light-info me-2">
+                                        <div class="avatar-content">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user avatar-icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        </div>
+                                    </div>
+                                    <div class="my-auto">
+                                        <h4 class="fw-bolder mb-0">8.549k</h4>
+                                        <p class="card-text font-small-3 mb-0">Customers</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6 col-12 mb-2 mb-sm-0">
+                                <div class="d-flex flex-row">
+                                    <div class="avatar bg-light-danger me-2">
+                                        <div class="avatar-content">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box avatar-icon"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                        </div>
+                                    </div>
+                                    <div class="my-auto">
+                                        <h4 class="fw-bolder mb-0">1.423k</h4>
+                                        <p class="card-text font-small-3 mb-0">Products</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6 col-12">
+                                <div class="d-flex flex-row">
+                                    <div class="avatar bg-light-success me-2">
+                                        <div class="avatar-content">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign avatar-icon"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                        </div>
+                                    </div>
+                                    <div class="my-auto">
+                                        <h4 class="fw-bolder mb-0">$9745</h4>
+                                        <p class="card-text font-small-3 mb-0">Revenue</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Greetings Card ends -->
-
-            <!-- Subscribers Chart Card starts -->
-            <div class="col-lg-3 col-sm-6 col-12">
-                <div class="card">
-                    <div class="card-header flex-column align-items-start pb-0">
-                        <div class="avatar bg-light-primary p-50 m-0">
-                            <div class="avatar-content">
-                                <i data-feather="users" class="font-medium-5"></i>
-                            </div>
-                        </div>
-                        <h2 class="fw-bolder mt-1">92.6k</h2>
-                        <p class="card-text">Subscribers Gained</p>
-                    </div>
-                    <div id="gained-chart"></div>
-                </div>
-            </div>
-            <!-- Subscribers Chart Card ends -->
-
-            <!-- Orders Chart Card starts -->
-            <div class="col-lg-3 col-sm-6 col-12">
-                <div class="card">
-                    <div class="card-header flex-column align-items-start pb-0">
-                        <div class="avatar bg-light-warning p-50 m-0">
-                            <div class="avatar-content">
-                                <i data-feather="package" class="font-medium-5"></i>
-                            </div>
-                        </div>
-                        <h2 class="fw-bolder mt-1">38.4K</h2>
-                        <p class="card-text">Orders Received</p>
-                    </div>
-                    <div id="order-chart"></div>
-                </div>
-            </div>
-            <!-- Orders Chart Card ends -->
         </div>
 
         <div class="row match-height">
@@ -68,57 +79,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row pb-50">
-                            <div class="col-sm-6 col-12 d-flex justify-content-between flex-column order-sm-1 order-2 mt-1 mt-sm-0">
-                                <div class="mb-1 mb-sm-0">
-                                    <h2 class="fw-bolder mb-25">2.7K</h2>
-                                    <p class="card-text fw-bold mb-2">Avg Sessions</p>
-                                    <div class="font-medium-2">
-                                        <span class="text-success me-25">+5.2%</span>
-                                        <span>vs last 7 days</span>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-primary">View Details</button>
-                            </div>
-                            <div class="col-sm-6 col-12 d-flex justify-content-between flex-column text-end order-sm-2 order-1">
-                                <div class="dropdown chart-dropdown">
-                                    <button class="btn btn-sm border-0 dropdown-toggle p-50" type="button" id="dropdownItem5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Last 7 Days
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownItem5">
-                                        <a class="dropdown-item" href="#">Last 28 Days</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Last Year</a>
-                                    </div>
-                                </div>
-                                <div id="avg-sessions-chart"></div>
-                            </div>
-                        </div>
-                        <hr />
-                        <div class="row avg-sessions pt-50">
-                            <div class="col-6 mb-2">
-                                <p class="mb-50">Goal: $100000</p>
-                                <div class="progress progress-bar-primary" style="height: 6px">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="50" aria-valuemax="100" style="width: 50%"></div>
-                                </div>
-                            </div>
-                            <div class="col-6 mb-2">
-                                <p class="mb-50">Users: 100K</p>
-                                <div class="progress progress-bar-warning" style="height: 6px">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="60" aria-valuemax="100" style="width: 60%"></div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <p class="mb-50">Retention: 90%</p>
-                                <div class="progress progress-bar-danger" style="height: 6px">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="70" aria-valuemax="100" style="width: 70%"></div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <p class="mb-50">Duration: 1yr</p>
-                                <div class="progress progress-bar-success" style="height: 6px">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="90" aria-valuemax="100" style="width: 90%"></div>
-                                </div>
-                            </div>
+                            <div id="chart"></div>
                         </div>
                     </div>
                 </div>

@@ -96,6 +96,8 @@
 <script src="{{ asset('assets/admin/app-assets/js/scripts/pages/app-invoice-list.js') }}"></script>
 <!-- END: Page JS-->
 
+<script src="{{ asset('assets/admin/app-assets/js/core/custom.js') }}"></script>
+
 <script>
     $(window).on('load', function() {
         if (feather) {
@@ -107,6 +109,8 @@
     })
 </script>
 @include('sweetalert::alert')
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 <script src="//unpkg.com/alpinejs') }}" defer></script>
 
