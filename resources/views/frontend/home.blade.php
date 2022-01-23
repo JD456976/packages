@@ -12,7 +12,7 @@
                              data-lap_num="1" data-tab_num="1" data-mob_num="1" data-mob_sm="1" data-autoplay="true"
                              data-loop="true" data-margin="0">
                             @foreach ($recent as $video)
-                                <div class="item" style="background: url('assets/frontend/images/background/handcuffs.jpg')">
+                                <div class="item" style="background: url('assets/frontend/images/PackageThievesLogo.png')">
                                     <div class="gen-movie-contain-style-2 h-100">
                                         <div class="container h-100">
                                             <div class="row flex-row-reverse align-items-center h-100">

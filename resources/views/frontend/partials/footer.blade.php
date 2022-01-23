@@ -53,10 +53,10 @@
                                 <div class="col-sm-12">
                                     <p>Check out some of the great platforms below</p>
                                     <a href="https://nextdoor.com/" target="_blank">
-                                        <img src="{{ asset('images/next-door.png') }}" class="gen-playstore-logo" alt="nextdoor">
+                                        <img src="{{ asset('assets/frontend/images/next-door.png') }}" class="gen-playstore-logo" alt="nextdoor">
                                     </a>
                                     <a href="https://patch.com/" target="_blank">
-                                        <img src="{{ asset('images/patch-logo.png') }}" class="gen-appstore-logo" alt="appstore">
+                                        <img src="{{ asset('assets/frontend/images/patch-logo.png') }}" class="gen-appstore-logo" alt="appstore">
                                     </a>
                                 </div>
                             </div>

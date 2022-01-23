@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="{{ route('home') }}">
-                            <img class="img-fluid logo"  src="{{ asset('assets/frontend/images/PackageThievesLogo.png') }}" alt="streamlab-image">
+                            <img style="height: 200px" class="img-fluid logo"  src="{{ asset('assets/frontend/images/PackageThievesLogo.png') }}" alt="streamlab-image">
                         </a>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
