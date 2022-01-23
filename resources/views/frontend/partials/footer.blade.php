@@ -40,7 +40,7 @@
                             <h4 class="footer-title">Resources</h4>
                             <div class="menu-about-container">
                                 <ul class="menu">
-                                    <li class="menu-item"><a href="contact-us.html">Company</a>
+                                    <li class="menu-item"><a href="{{ route('faq') }}">FAQ</a>
                                     </li>
                                 </ul>
                             </div>

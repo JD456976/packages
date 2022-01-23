@@ -48,4 +48,10 @@ class HomeController extends Controller
         $recent = Video::orderBy('created_at', 'desc')->get()->take(5);
         return view('frontend.about', compact('recent'));
     }
+
+    public function faq()
+    {
+        $recent = Video::orderBy('created_at', 'desc')->get()->take(5);
+        return view('frontend.faq', compact('recent'));
+    }
 }

@@ -38,6 +38,11 @@ Route::get('about', [
     'uses' => 'App\Http\Controllers\HomeController@about',
 ]);
 
+Route::get('faq', [
+    'as' => 'faq',
+    'uses' => 'App\Http\Controllers\HomeController@faq',
+]);
+
 Route::post('contact', [
     'as' => 'contact.send',
     'uses' => 'App\Http\Controllers\HomeController@sendContact',
