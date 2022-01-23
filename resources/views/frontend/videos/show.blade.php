@@ -87,6 +87,7 @@
                                 </div>
 
                             </div>
+                            <h2 class="mt-4 ml-3">Comments</h2>
                             @include('frontend.partials.comment')
                             <div class="col-lg-12">
                                 <div class="pm-inner">

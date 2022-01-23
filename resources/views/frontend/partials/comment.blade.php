@@ -1,69 +1,49 @@
-<div class="col-lg-12">
-    <div class="pm-inner">
-        <div class="gen-more-like">
-            <h5 class="gen-more-title">Comments</h5>
-            <div class="row text-center">
-                <div class="col-lg-8">
-                    @foreach ($comments as $comment)
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h6 class="card-subtitle mb-2 text-muted">{{ $comment->user->username }} Said:</h6>
-                                <p class="card-text">{{ $comment->text }}</p>
-                                <div class="card-footer">
-                                    <p class="card-text">{{ $comment->created_at->diffForHumans() }}</p>
+<div class="container mt-5 mb-5">
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-7">
+            <div class="card">
+                <div class="p-3">
+                    <h6>Comments</h6>
+                </div>
+                <div class="align-items-center p-3 form-color">
+                    {!! Form::open(['route' => ['comment', $video->id], 'method' => 'post']) !!}
+                    <div class="form-group">
+                        @error('comment')
+                            <div class="alert alert-danger alert-dismissible mb-2" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            <div class="d-flex align-items-center">
+                                <i class="bx bx-error"></i>
+                                    <span>{{$message}}</span>
+                            </div>
+                        </div>
+                        @enderror
+                        {!! Form::text('comment', old('comment'), ['class' => 'form-control', 'placeholder' => 'Add Your Comment']) !!}
+                        {!! Form::submit('Add Comment', ['class' => 'btn btn-primary mt-2']) !!}
+                    </div>
+                    {!! Form::close() !!}
+                </div>
+                <div class="mt-2">
+                    @foreach($comments as $comment)
+                        <div class="d-flex flex-row p-3">
+                            <div class="w-100">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <a href="{{ route('user.show', $comment->user->id) }}"><h6 style="color:black;" class="mr-2">{{ $comment->user->username }}</h6></a>
+
+                                    </div>
+                                    <small>{{ $comment->created_at->diffForHumans() }}</small>
                                 </div>
+                                <p style="color:black" class="text-justify comment-text mb-0 border-bottom">
+                                    {{ $comment->text }}
+                                </p>
                             </div>
                         </div>
                     @endforeach
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    @guest
-                        <div class="row">
-                            <div class="col-lg-12 mb-5">
-                                <h4>You must be logged in to comment.</h4>
-                            </div>
-                        </div>
 
-                    @endguest
-                    @auth
-                        <div>
-                            {!! Form::open(['route' => ['comment', $video->id], 'method' => 'post', 'id' => 'pms_login', 'name' => 'pms_login']) !!}
-                            @if (session('status'))
-                                <div class="alert alert-success alert-dismissible mb-2" role="alert">
-                                    <div class="d-flex align-items-center">
-                                        <span>{{ session('status') }}</span>
-                                    </div>
-                                </div>
-                            @endif
-                            <h4>Leave a Comment</h4>
-                            <p class="login-password">
-                            {!! Form::textarea('comment', '',['class' => 'input', 'width' => '300']) !!}
-                            @error('comment')
-                            <div class="alert alert-danger alert-dismissible mb-2" role="alert">
-                                <div class="d-flex align-items-center">
-                                    <span>{{$message}}</span>
-                                </div>
-                            </div>
-                            @enderror
-                            </p>
-                            <p class="login-password">
-
-
-
-                            </p>
-                            <p class="login-submit">
-                                {!! Form::submit('Submit', ['class' => 'button button-primary']) !!}
-                            </p>
-                            {!! Form::close() !!}
-                        </div>
-                    @endauth
                 </div>
             </div>
         </div>
-
     </div>
-
-
 </div>
