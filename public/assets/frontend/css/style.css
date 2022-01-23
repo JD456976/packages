@@ -16,7 +16,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 ==> Moz Selection
 ==> General
 ==> HTML Tages
-==> Section 
+==> Section
 ==> Container
 ==> Loading
 ==> Back to Top
@@ -171,8 +171,8 @@ h6 {
     line-height: 28px;
 }
 
-/*=============================================== 
-HTML Tags 
+/*===============================================
+HTML Tags
 =================================================*/
 a,
 .button {
@@ -381,8 +381,8 @@ select.form-control {
     margin-bottom: 30px;
 }
 
-/*============================================ 
-Section 
+/*============================================
+Section
 ==============================================*/
 
 section,
@@ -412,8 +412,8 @@ section,
     }
 }
 
-/*========================================= 
-Container 
+/*=========================================
+Container
 ===========================================*/
 
 .container {
@@ -476,7 +476,7 @@ Loading
 @media (max-width: 479px){
     #gen-loading img {
     height: 60px;
-   } 
+   }
 }
 
 /*================================================

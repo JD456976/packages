@@ -5,13 +5,11 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
                         <a class="navbar-brand" href="{{ route('home') }}">
-                            <img class="img-fluid logo" src="assets/frontend/images/logo-1.png" alt="streamlab-image">
+                            <img class="img-fluid logo"  src="{{ asset('assets/frontend/images/PackageThievesLogo.png') }}" alt="streamlab-image">
                         </a>
-                        <div class="row ml-auto">
-                            <h2>Catching thieves...</h2>
-                        </div>
+
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <div id="gen-menu-contain" class="gen-menu-contain">
+                            <div id="gen-menu-contain" class="gen-menu-contain" style="font-size:28px;">
                                 <ul id="gen-main-menu" class="navbar-nav ml-auto">
                                     <li class="menu-item active">
                                         @can('is-admin')

@@ -35,6 +35,11 @@
                             @endforeach
                         </ul>
                     </div>
+                    <div class="widget widget_recent_entries">
+                        <a class="" href="{{ route('home') }}">
+                            <img class=""  src="{{ asset('assets/frontend/images/PackageThievesLogo.png') }}" alt="streamlab-image">
+                        </a>
+                    </div>
                 </div>
                 <div class="col-xl-9 col-md-12 order-1 order-xl-2">
                     <div class="gen-blog gen-blog-col-1">

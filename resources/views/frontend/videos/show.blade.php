@@ -144,26 +144,6 @@
                                                 </div>
                                             @endforeach
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="gen-load-more-button">
-                                                    <div class="gen-btn-container">
-                                                        <a class="gen-button gen-button-loadmore gen-button-flat"
-                                                           href="#">
-                                                            <span class="button-text">Load More</span>
-                                                            <span class="loadmore-icon" style="display: none;"><i
-                                                                    class="fa fa-spinner fa-spin"></i></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="post-loadmore-data"
-                                                 data-query="{&quot;page&quot;:0,&quot;video&quot;:&quot;how-to-hit-the-perfect-tennis&quot;,&quot;post_type&quot;:&quot;video&quot;,&quot;name&quot;:&quot;how-to-hit-the-perfect-tennis&quot;,&quot;error&quot;:&quot;&quot;,&quot;m&quot;:&quot;&quot;,&quot;p&quot;:0,&quot;post_parent&quot;:&quot;&quot;,&quot;subpost&quot;:&quot;&quot;,&quot;subpost_id&quot;:&quot;&quot;,&quot;attachment&quot;:&quot;&quot;,&quot;attachment_id&quot;:0,&quot;pagename&quot;:&quot;&quot;,&quot;page_id&quot;:0,&quot;second&quot;:&quot;&quot;,&quot;minute&quot;:&quot;&quot;,&quot;hour&quot;:&quot;&quot;,&quot;day&quot;:0,&quot;monthnum&quot;:0,&quot;year&quot;:0,&quot;w&quot;:0,&quot;category_name&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;cat&quot;:&quot;&quot;,&quot;tag_id&quot;:&quot;&quot;,&quot;author&quot;:&quot;&quot;,&quot;author_name&quot;:&quot;&quot;,&quot;feed&quot;:&quot;&quot;,&quot;tb&quot;:&quot;&quot;,&quot;paged&quot;:0,&quot;meta_key&quot;:&quot;&quot;,&quot;meta_value&quot;:&quot;&quot;,&quot;preview&quot;:&quot;&quot;,&quot;s&quot;:&quot;&quot;,&quot;sentence&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;fields&quot;:&quot;&quot;,&quot;menu_order&quot;:&quot;&quot;,&quot;embed&quot;:&quot;&quot;,&quot;category__in&quot;:[],&quot;category__not_in&quot;:[],&quot;category__and&quot;:[],&quot;post__in&quot;:[],&quot;post__not_in&quot;:[],&quot;post_name__in&quot;:[],&quot;tag__in&quot;:[],&quot;tag__not_in&quot;:[],&quot;tag__and&quot;:[],&quot;tag_slug__in&quot;:[],&quot;tag_slug__and&quot;:[],&quot;post_parent__in&quot;:[],&quot;post_parent__not_in&quot;:[],&quot;author__in&quot;:[],&quot;author__not_in&quot;:[],&quot;ignore_sticky_posts&quot;:false,&quot;suppress_filters&quot;:false,&quot;cache_results&quot;:true,&quot;update_post_term_cache&quot;:true,&quot;lazy_load_term_meta&quot;:true,&quot;update_post_meta_cache&quot;:true,&quot;posts_per_page&quot;:10,&quot;nopaging&quot;:false,&quot;comments_per_page&quot;:&quot;50&quot;,&quot;no_found_rows&quot;:false,&quot;order&quot;:&quot;DESC&quot;}"
-                                                 data-box_style="2" data-paged="1" data-max="0" data-nonce="4619a941c5"
-                                                 data-post_type="video"></div>
-                                        </div>
                                     </div>
 
                                 </div>

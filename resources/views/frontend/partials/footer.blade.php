@@ -7,8 +7,9 @@
                         <div class="widget">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <img src="/images/asset-0.png" class="gen-footer-logo" alt="gen-footer-logo">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <a class="" href="{{ route('home') }}">
+                                        <img class=""  src="{{ asset('assets/frontend/images/PackageThievesLogo.png') }}" alt="streamlab-image">
+                                    </a>
                                 </div>
                             </div>
                         </div>

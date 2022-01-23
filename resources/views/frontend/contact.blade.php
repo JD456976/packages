@@ -73,9 +73,11 @@
                         </div>
                     {!! Form::close() !!}
                 </div>
-                <div class="col-xl-6">
+                <div class="col-xl-6 mt-5 pt-5">
                     <div style="width: 100%">
-                        placeholder
+                        <a class="" href="{{ route('home') }}">
+                            <img class=""  src="{{ asset('assets/frontend/images/PackageThievesLogo.png') }}" alt="streamlab-image">
+                        </a>
                     </div>
                 </div>
             </div>
