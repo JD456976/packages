@@ -93,15 +93,14 @@ class VideoController extends Controller
      */
     public function show(Request $request, $slug)
     {
-
         $related = Video::isTagged()->get();
         $video = Video::where('slug', $slug)->first();
-
+        $histories = $video->revisionHistory;
         $comments = $video->comments;
 
         views($video)->record();
 
-        return view('frontend.videos.show', compact('video','comments','related'));
+        return view('frontend.videos.show', compact('video','comments','related','histories'));
     }
 
     /**

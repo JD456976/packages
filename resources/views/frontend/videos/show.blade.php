@@ -90,6 +90,35 @@
                                                    class="facebook"><i class="fab fa-twitter"></i></a></li>
                                         </ul>
                                     </div>
+                                    @can('is-admin')
+                                    <div class="gen-socail-share">
+                                        <h4 class="align-self-center">Revision History :</h4>
+                                        <ul class="social-inner">
+                                            @foreach ($histories as $history)
+                                                <li>
+                                                    <strong>
+                                                        {{ $history->userResponsible()->name }}
+                                                    </strong>
+                                                     changed
+                                                    <strong>
+                                                        {{ $history->key }}
+                                                    </strong>
+                                                     from:
+                                                    <strong>
+                                                        {{ $history->old_value }}
+                                                    </strong>
+                                                    to:
+                                                    <strong>
+                                                        {{ $history->new_value }}
+                                                    </strong>
+                                                     when:
+                                                    {{ $history->created_at->diffForHumans() }}
+                                                </li>
+                                            @endforeach
+
+                                        </ul>
+                                    </div>
+                                    @endcan
                                 </div>
 
                             </div>
