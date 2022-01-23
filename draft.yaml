@@ -1,16 +1,12 @@
 models:
-  Video:
-    title: string
-    url: string
-    zip: numeric
-    relationships:
-      belongsTo: User
+  Report:
+    user_id: integer
+    reportable_type: string
+    reportable_id: integer
+    reason: string
+    comment: string
+
 
 controllers:
-  Video:
+  Report:
     resource
-    store:
-      validate: title,zip,url
-
-seeders:
-  Video

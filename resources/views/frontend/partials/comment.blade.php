@@ -33,13 +33,15 @@
                                         <a href="{{ route('user.show', $comment->user->id) }}"><h6 style="color:black;" class="mr-2">{{ $comment->user->username }}</h6></a>
 
                                     </div>
-                                    <small>{{ $comment->created_at->diffForHumans() }}</small>
+                                    <small>{{ $comment->created_at->diffForHumans() }}
+                                        <a href="" data-toggle="modal" data-target="#reportCommentModal"><i class="fa fa-exclamation-triangle"></i></a></small>
                                 </div>
                                 <p style="color:black" class="text-justify comment-text mb-0 border-bottom">
                                     {{ $comment->text }}
                                 </p>
                             </div>
                         </div>
+                        @include('frontend.partials.report-comment-modal')
                     @endforeach
 
                 </div>

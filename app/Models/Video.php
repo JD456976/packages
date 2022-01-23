@@ -97,4 +97,9 @@ class Video extends Model implements Viewable, HasMedia
     {
         return Video::where('is_approved', 1)->count();
     }
+
+    public function reports()
+    {
+        return $this->morphMany(Report::class, 'reportable');
+    }
 }

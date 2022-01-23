@@ -67,4 +67,9 @@ class User extends Authenticatable
     {
         return User::where('is_banned', 0)->count();
     }
+
+    public function reports()
+    {
+        return $this->morphMany(Report::class, 'reportable');
+    }
 }

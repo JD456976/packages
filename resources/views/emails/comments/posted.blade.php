@@ -7,7 +7,7 @@ A new comment was posted on a video you uploaded.
 
 
 
-@component('mail::button', ['url' => $url])
+@component('mail::button', ['url' => '/video/'.$video->slug])
 View Video
 @endcomponent
 <br>
@@ -15,7 +15,7 @@ View Video
 
 Too many emails? Change your notification preferences in your profile:
 
-@component('mail::button', ['url' => $profile, 'color' => 'error'])
+@component('mail::button', ['url' => '/user/'.$video->user->id.'/edit', 'color' => 'error'])
     Your Profile
 @endcomponent
 

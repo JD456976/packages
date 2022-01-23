@@ -1,13 +1,13 @@
 created:
-    - app/Http/Controllers/VideoController.php
-    - database/factories/VideoFactory.php
-    - database/migrations/2022_01_16_062445_create_videos_table.php
-    - app/Models/Video.php
-    - database/seeders/VideoSeeder.php
-    - app/Http/Requests/VideoStoreRequest.php
-    - app/Http/Requests/VideoUpdateRequest.php
+    - app/Http/Controllers/ReportController.php
+    - database/factories/ReportFactory.php
+    - database/migrations/2022_01_23_052643_create_reports_table.php
+    - app/Models/Report.php
+    - app/Http/Requests/ReportStoreRequest.php
+    - app/Http/Requests/ReportUpdateRequest.php
 updated:
     - routes/web.php
 models:
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, two_factor_secret: 'text nullable', two_factor_recovery_codes: 'text nullable', remember_token: 'string:100 nullable' }
     Video: { title: string, url: string, zip: numeric, relationships: { belongsTo: User } }
+    Report: { user_id: integer, reportable_type: string, reportable_id: integer, reason: string, comment: string }

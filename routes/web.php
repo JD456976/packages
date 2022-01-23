@@ -64,3 +64,13 @@ Route::get('search/{query}', [
 Route::post('comment/{comment}', [
     'as' => 'comment',
     'uses' => 'App\Http\Controllers\VideoController@comment',])->middleware(['auth']);
+
+Route::post('report/video/{id}', [
+    'as' => 'report.video',
+    'uses' => 'App\Http\Controllers\ReportController@video',
+]);
+Route::post('report/comment/{id}', [
+    'as' => 'report.comment',
+    'uses' => 'App\Http\Controllers\ReportController@comment',
+]);
+Route::resource('report', App\Http\Controllers\ReportController::class);
