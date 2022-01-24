@@ -24,7 +24,7 @@ class VideoController extends Controller
      */
     public function index(Request $request)
     {
-        $videos = Video::all();
+        $videos = Video::where('is_approved',1)->get();
 
         return view('frontend.videos.index', compact('videos'));
     }

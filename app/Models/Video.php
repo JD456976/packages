@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentTaggable\Taggable;
 use CyrildeWit\EloquentViewable\InteractsWithViews;
@@ -78,9 +79,9 @@ class Video extends Model implements Viewable, HasMedia
             ->useFallbackPath(public_path('/images/anonymous-user.jpg'));
     }
 
-    public function recent()
+    public static function recent()
     {
-        return $this->Video::orderBy('created_at', 'desc')->get()->take(5);
+        return Video::where('is_approved', 1)->orderBy('created_at', 'desc')->get()->take(5);
     }
 
     public static function count()
@@ -96,6 +97,11 @@ class Video extends Model implements Viewable, HasMedia
     public static function approved()
     {
         return Video::where('is_approved', 1)->count();
+    }
+
+    public static function hot()
+    {
+        return Video::orderByViews()->where('is_approved',1)->whereDate('created_at', '>=', Carbon::now()->subDays(7))->take(12)->get();
     }
 
     public function reports()

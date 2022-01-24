@@ -15,8 +15,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $recent = Video::orderBy('created_at', 'desc')->get()->take(5);
-        $hot = Video::orderByViews()->whereDate('created_at', '>=', Carbon::now()->subDays(7))->take(12)->get();
+        $recent = Video::recent();
+        $hot = Video::hot();
         return view('frontend.home', compact('recent', 'hot'));
     }
 
@@ -45,13 +45,13 @@ class HomeController extends Controller
 
     public function about()
     {
-        $recent = Video::orderBy('created_at', 'desc')->get()->take(5);
+        $recent = Video::recent();
         return view('frontend.about', compact('recent'));
     }
 
     public function faq()
     {
-        $recent = Video::orderBy('created_at', 'desc')->get()->take(5);
+        $recent = Video::recent();
         return view('frontend.faq', compact('recent'));
     }
 }

@@ -24,27 +24,27 @@ class VideoSorting extends Component
     {
         if ($this->sortBy == 'newest')
         {
-            $videos = Video::orderBy('created_at', 'desc')->paginate($this->perPage);
+            $videos = Video::orderBy('created_at', 'desc')->where('is_approved',1)->paginate($this->perPage);
         }
         else if ($this->sortBy == 'oldest')
         {
-            $videos = Video::orderBy('created_at', 'asc')->paginate($this->perPage);
+            $videos = Video::orderBy('created_at', 'asc')->where('is_approved',1)->paginate($this->perPage);
         }
         else if ($this->sortBy == 'featured')
         {
-            $videos = Video::where('is_featured',1)->paginate($this->perPage);
+            $videos = Video::where('is_featured',1)->where('is_approved',1)->paginate($this->perPage);
         }
         else if ($this->sortBy == 'zip')
         {
-            $videos = Video::orderBy('zip', 'desc')->paginate($this->perPage);
+            $videos = Video::orderBy('zip', 'desc')->where('is_approved',1)->paginate($this->perPage);
         }
         else if ($this->sortBy == 'views')
         {
-            $videos = Video::orderByViews()->get();
+            $videos = Video::orderByViews()->where('is_approved',1)->get();
         }
         else
         {
-            $videos = Video::paginate($this->perPage);
+            $videos = Video::where('is_approved',1)->paginate($this->perPage);
         }
 
         return view('livewire.video-sorting', ['videos' => $videos]);
