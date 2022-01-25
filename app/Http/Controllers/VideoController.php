@@ -8,6 +8,7 @@ use App\Http\Requests\CommentRequest;
 use App\Http\Requests\VideoStoreRequest;
 use App\Http\Requests\VideoUpdateRequest;
 use App\Mail\CommentPosted;
+use App\Models\Report;
 use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -93,14 +94,16 @@ class VideoController extends Controller
      */
     public function show(Request $request, $slug)
     {
+
         $related = Video::isTagged()->get();
         $video = Video::where('slug', $slug)->first();
+        $reported = Report::reported($video);
         $histories = $video->revisionHistory;
         $comments = $video->comments;
 
         views($video)->record();
 
-        return view('frontend.videos.show', compact('video','comments','related','histories'));
+        return view('frontend.videos.show', compact('video','comments','related','histories','reported'));
     }
 
     /**

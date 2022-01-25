@@ -108,4 +108,9 @@ class Video extends Model implements Viewable, HasMedia
     {
         return $this->morphMany(Report::class, 'reportable');
     }
+
+    public function report()
+    {
+        return $this->hasOne(Report::class, 'reportable_id');
+    }
 }

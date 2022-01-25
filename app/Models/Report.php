@@ -41,8 +41,23 @@ class Report extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function video()
+    {
+        return $this->hasOne(Video::class,'id');
+    }
+
     public function users()
     {
         return $this->hasOne(User::class, 'id');
+    }
+
+    public static function reported(Video $video)
+    {
+        return Report::where('reportable_id', $video->id)->count();
+    }
+
+    public static function allReported()
+    {
+        return Report::groupBy('reportable_id')->pluck('reportable_id')->count();
     }
 }

@@ -4,7 +4,7 @@
     </x-slot>
     <div class="container" style="margin-top: 100px;">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" style="margin-top: 100px;">
                 <div id="primary" class="content-area">
                     <article
                         class="post-1471 video type-video status-publish has-post-thumbnail hentry video_cat-tennis">
@@ -26,9 +26,15 @@
                                     @can('update-video', $video)
                                     <a data-toggle="tooltip" data-placement="top" title="Edit This Video" href="{{ route('video.edit',$video->id) }}"><i class="fa fa-pencil-alt"></i></a>
                                     @endcan
-                                    <button type="button" class="btn-sm rounded btn-danger ml-3" data-toggle="modal" data-target="#reportVideoModal">
-                                        Report Video
-                                    </button>
+                                        @if ($reported  >= 1)
+                                        <button disabled data-toggle="tooltip" data-placement="top" title="Video was alrady reported"  type="button" class="btn-sm rounded btn-secondary ml-3">
+                                            Reported
+                                        </button>
+                                        @else
+                                        <button  type="button" class="btn-sm rounded btn-danger ml-3" data-toggle="modal" data-target="#reportVideoModal">
+                                            Report Video
+                                        </button>
+                                        @endif
                                     <div class="gen-single-meta-holder">
                                         <ul>
                                             <li><strong class="mr-2">Posted By:</strong><a href="{{ route('user.show', $video->user->id) }}">{{ $video->user->username }}</a></li>

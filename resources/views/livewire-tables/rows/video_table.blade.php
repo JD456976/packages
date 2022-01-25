@@ -19,7 +19,6 @@
 </x-livewire-tables::table.cell>
 
 <x-livewire-tables::table.cell>
-
     @if($row->is_featured == 1)
         <a href="{{ route('admin.videos.unfeature', $row->id) }}"><span class="badge badge-glow bg-secondary">Unfeature</span>
         </a>

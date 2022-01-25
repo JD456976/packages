@@ -56,4 +56,6 @@ Route::middleware(['admin', 'auth'])->group(function() {
         'as' => 'page.activate',
         'uses' => 'App\Http\Controllers\Admin\PageController@activate',
     ]);
+
+    Route::resource('reports', \App\Http\Controllers\Admin\ReportController::class,);
 });

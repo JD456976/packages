@@ -28,6 +28,7 @@ class ReportFactory extends Factory
             'reportable_id' => $this->faker->numberBetween(-10000, 10000),
             'reason' => $this->faker->word,
             'comment' => $this->faker->word,
+            'is_resolved' => $this->faker->boolean,
         ];
     }
 }

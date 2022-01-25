@@ -14,7 +14,7 @@ class VideoStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string',
+            'title' => 'required|string|max:20',
             'zip' => 'required|numeric',
             'tags' => 'required',
             'file' => 'mimes:mp4,avi,mpg,mov',
