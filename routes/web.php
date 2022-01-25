@@ -33,14 +33,19 @@ Route::get('contact', [
     'uses' => 'App\Http\Controllers\HomeController@showContact',
 ]);
 
-Route::get('about', [
-    'as' => 'about',
-    'uses' => 'App\Http\Controllers\HomeController@about',
-]);
+//Route::get('about', [
+//    'as' => 'about',
+//    'uses' => 'App\Http\Controllers\HomeController@about',
+//]);
+//
+//Route::get('faq', [
+//    'as' => 'faq',
+//    'uses' => 'App\Http\Controllers\HomeController@faq',
+//]);
 
-Route::get('faq', [
-    'as' => 'faq',
-    'uses' => 'App\Http\Controllers\HomeController@faq',
+Route::get('page/{slug}', [
+    'as' => 'page',
+    'uses' => 'App\Http\Controllers\HomeController@page',
 ]);
 
 Route::post('contact', [

@@ -17,9 +17,12 @@
                                         <div class="container h-100">
                                             <div class="row flex-row-reverse align-items-center h-100">
                                                 <div class="col-xl-6">
-                                                    <div class="gen-front-image">
-                                                        <img src="{{ $video->getFirstMedia('videos')->getUrl('thumb') }}" alt="owl-carousel-banner-image">
-                                                    </div>
+                                                    @if (!empty($video->getFirstMedia('videos')))
+                                                        <div class="gen-front-image">
+                                                            <img src="{{ $video->getFirstMedia('videos')->getUrl('thumb') }}" alt="owl-carousel-banner-image">
+                                                        </div>
+                                                    @endif
+
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="gen-tag-line">
@@ -115,6 +118,7 @@
                                         class="movie type-movie status-publish has-post-thumbnail hentry movie_genre-action movie_genre-adventure movie_genre-drama">
                                         <div class="gen-carousel-movies-style-2 movie-grid style-2">
                                             <div class="gen-movie-contain">
+                                                @if (!empty($video->getFirstMedia('videos')))
                                                 <div class="gen-movie-img">
                                                     <img src="{{ $video->getFirstMedia('videos')->getUrl('thumb') }}" alt="owl-carousel-video-image">
                                                     <div class="gen-movie-action">
@@ -123,6 +127,7 @@
                                                         </a>
                                                     </div>
                                                 </div>
+                                                @endif
                                                 <div class="gen-info-contain">
                                                     <div class="gen-movie-info">
                                                         <h3><a href="{{ route('video.show', $video->slug) }}">{{ $video->title }}</a>

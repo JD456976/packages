@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ContactSentRequest;
 use App\Http\Requests\SearchRequest;
 use App\Mail\ContactForm;
+use App\Models\Page;
 use App\Models\Video;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -52,6 +53,15 @@ class HomeController extends Controller
     public function faq()
     {
         $recent = Video::recent();
-        return view('frontend.faq', compact('recent'));
+        return view('frontend.page', compact('recent'));
+    }
+
+    public function page($slug)
+    {
+        $recent = Video::recent();
+
+        $page = Page::where('slug',$slug)->first();
+
+        return view('frontend.page', compact('page', 'recent'));
     }
 }

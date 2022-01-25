@@ -19,10 +19,12 @@
                                     <li>
                                         <a href="{{ route('video.index') }}">Videos</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('about') }}">About
-                                             </a>
-                                    </li>
+                                    @foreach ($mainMenu as $item)
+                                        <li>
+                                            <a href="{{ route('page',$item->slug) }}">{{ $item->title  }}
+                                            </a>
+                                        </li>
+                                    @endforeach
                                     <li>
                                         <a href="{{ route('contact') }}">Contact
                                              </a>

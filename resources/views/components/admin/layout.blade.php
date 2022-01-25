@@ -39,6 +39,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/assets/css/style.css') }}">
     <!-- END: Custom CSS-->
     @livewireStyles
+    @stack('head-scripts')
 </head>
 <!-- END: Head-->
 
@@ -115,6 +116,7 @@
 <script src="//unpkg.com/alpinejs') }}" defer></script>
 
 @livewireScripts
+@stack('footer-scripts')
 </body>
 <!-- END: Body-->
 

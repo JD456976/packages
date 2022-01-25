@@ -19,12 +19,11 @@
                             <h4 class="footer-title">Menu</h4>
                             <div class="menu-explore-container">
                                 <ul class="menu">
-                                    <li class="menu-item">
-                                        <a href="{{ route('home') }}" aria-current="page">Home</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="{{ route('about') }}" aria-current="page">About</a>
-                                    </li>
+                                    @foreach ($footerMenu as $item)
+                                        <li class="menu-item">
+                                            <a href="{{ route('page', $item->slug) }}" aria-current="page">{{ $item->title }}</a>
+                                        </li>
+                                    @endforeach
                                     <li class="menu-item">
                                         <a href="{{ route('contact') }}" aria-current="page">Contact</a>
                                     </li>
@@ -40,7 +39,7 @@
                             <h4 class="footer-title">Resources</h4>
                             <div class="menu-about-container">
                                 <ul class="menu">
-                                    <li class="menu-item"><a href="{{ route('faq') }}">FAQ</a>
+                                    <li class="menu-item"><a href="">FAQ</a>
                                     </li>
                                 </ul>
                             </div>

@@ -33,6 +33,7 @@
         "venturecraft/revisionable": "^1.39"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "filp/whoops": "^2.14",

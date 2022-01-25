@@ -1,12 +1,15 @@
 models:
-  Report:
-    user_id: integer
-    reportable_type: string
-    reportable_id: integer
-    reason: string
-    comment: string
+  Page:
+    id: integer
+    title: string
+    slug: string
+    is_active: boolean
+
 
 
 controllers:
-  Report:
+  Page:
     resource
+
+seed:
+    Page

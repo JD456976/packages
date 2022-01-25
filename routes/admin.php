@@ -45,4 +45,15 @@ Route::middleware(['admin', 'auth'])->group(function() {
         'as' => 'videos.approve',
         'uses' => 'App\Http\Controllers\Admin\VideoController@approve',
     ]);
+
+    Route::resource('page', \App\Http\Controllers\Admin\PageController::class);
+
+    Route::get('page/deactivate/{id}', [
+        'as' => 'page.deactivate',
+        'uses' => 'App\Http\Controllers\Admin\PageController@deactivate',
+    ]);
+    Route::get('page/activate/{id}', [
+        'as' => 'page.activate',
+        'uses' => 'App\Http\Controllers\Admin\PageController@activate',
+    ]);
 });

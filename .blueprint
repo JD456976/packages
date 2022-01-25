@@ -1,13 +1,14 @@
 created:
-    - app/Http/Controllers/ReportController.php
-    - database/factories/ReportFactory.php
-    - database/migrations/2022_01_23_052643_create_reports_table.php
-    - app/Models/Report.php
-    - app/Http/Requests/ReportStoreRequest.php
-    - app/Http/Requests/ReportUpdateRequest.php
+    - app/Http/Controllers/PageController.php
+    - database/factories/PageFactory.php
+    - database/migrations/2022_01_25_020739_create_pages_table.php
+    - app/Models/Page.php
+    - app/Http/Requests/PageStoreRequest.php
+    - app/Http/Requests/PageUpdateRequest.php
 updated:
     - routes/web.php
 models:
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, two_factor_secret: 'text nullable', two_factor_recovery_codes: 'text nullable', remember_token: 'string:100 nullable' }
     Video: { title: string, url: string, zip: numeric, relationships: { belongsTo: User } }
     Report: { user_id: integer, reportable_type: string, reportable_id: integer, reason: string, comment: string }
+    Page: { id: integer, title: string, slug: string, is_active: boolean }
