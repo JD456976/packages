@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ReportReceivedEvent;
 use App\Http\Requests\ReportStoreRequest;
 use App\Http\Requests\ReportUpdateRequest;
 use App\Models\Comment;
@@ -99,6 +100,8 @@ class ReportController extends Controller
 
         $video->reports()->save($report);
 
+        event(new ReportReceivedEvent($report));
+
         Alert::success('Success!', 'Report successfully submitted');
 
         return redirect()->back();
@@ -114,6 +117,8 @@ class ReportController extends Controller
         $report->user_id = Auth::user()->id;
 
         $comment->reports()->save($report);
+
+        event(new ReportReceivedEvent($report));
 
         Alert::success('Success!', 'Report successfully submitted');
 

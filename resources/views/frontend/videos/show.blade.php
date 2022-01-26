@@ -23,6 +23,7 @@
                                         <h2 class="gen-title">{{ $video->title }}</h2>
                                     </div>
                                     @include('frontend.partials.report-video-modal')
+                                    @auth
                                     @can('update-video', $video)
                                     <a data-toggle="tooltip" data-placement="top" title="Edit This Video" href="{{ route('video.edit',$video->id) }}"><i class="fa fa-pencil-alt"></i></a>
                                     @endcan
@@ -35,6 +36,7 @@
                                             Report Video
                                         </button>
                                         @endif
+                                    @endauth
                                     <div class="gen-single-meta-holder">
                                         <ul>
                                             <li><strong class="mr-2">Posted By:</strong><a href="{{ route('user.show', $video->user->id) }}">{{ $video->user->username }}</a></li>
