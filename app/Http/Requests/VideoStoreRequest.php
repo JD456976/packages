@@ -17,7 +17,7 @@ class VideoStoreRequest extends FormRequest
             'title' => 'required|string|max:20',
             'zip' => 'required|numeric',
             'tags' => 'required',
-            'file' => 'mimes:mp4,avi,mpg,mov',
+            
             'g-recaptcha-response' => 'required|recaptcha:video'
         ];
     }
