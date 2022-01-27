@@ -1,7 +1,7 @@
 @component('mail::message')
 Hi,
 <br>
-{{ $user->name }}
+{{ $user->username }}
 
 A video was just uploaded that matched the Zipcode you have set in your profile:
 

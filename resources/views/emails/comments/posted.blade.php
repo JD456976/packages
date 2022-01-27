@@ -1,10 +1,9 @@
 @component('mail::message')
 Hi,
 <br>
-{{ $video->user->name }}
+{{ $video->user->username }}
 
 A new comment was posted on a video you uploaded.
-
 
 
 @component('mail::button', ['url' => '/video/'.$video->slug])

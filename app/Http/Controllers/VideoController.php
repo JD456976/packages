@@ -9,6 +9,7 @@ use App\Http\Requests\VideoStoreRequest;
 use App\Http\Requests\VideoUpdateRequest;
 use App\Mail\CommentPosted;
 use App\Models\Report;
+use App\Models\User;
 use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -55,10 +56,11 @@ class VideoController extends Controller
     public function store(VideoStoreRequest $request)
     {
         $video = new Video();
+        $user = User::find(Auth::user())->first();
 
         if(Video::count() <= 1)
         {
-            event(new FirstVideoPosted($video->user));
+            event(new FirstVideoPosted($user));
         }
         else {
             $video->is_approved = 1;
@@ -130,7 +132,7 @@ class VideoController extends Controller
 
         if (!empty($request->tags))
         {
-            $video->tag($request->tags);
+            $video->retag($request->tags);
         }
 
         $video->update();

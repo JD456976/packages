@@ -1,7 +1,7 @@
 @component('mail::message')
 Hi,
 <br>
-{{ $user->name }}
+{{ $user->username }}
 
 <p>Thank you for posting your first video. As this is your first video uploaded, it's status is pending until it is
     reviewed. Once we

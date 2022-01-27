@@ -1,6 +1,6 @@
 @component('mail::message')
 <br>
-{{ $user->name }},
+{{ $user->username }},
 <br>
 Your account has been banned for inappropriate behavior. If you think this is an error, contact us directly.
 

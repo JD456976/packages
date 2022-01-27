@@ -1,6 +1,6 @@
 @component('mail::message')
 <br>
-{{ $user->name }},
+{{ $user->username }},
 <br>
 Your account has been unbanned.
 
