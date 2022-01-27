@@ -25,7 +25,19 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->instance(LogoutResponse::class, new class implements LogoutResponse {
+            public function toResponse($request)
+            {
+                return redirect('/');
+            }
+        });
+
+        $this->app->instance(LoginResponse::class, new class implements LoginResponse {
+            public function toResponse($request)
+            {
+                return redirect()->back();
+            }
+        });
     }
 
     /**
@@ -68,20 +80,6 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::confirmPasswordView(function () {
             return view('frontend.auth.confirm-password');
-        });
-
-        $this->app->instance(LogoutResponse::class, new class implements LogoutResponse {
-            public function toResponse($request)
-            {
-                return redirect('/');
-            }
-        });
-
-        $this->app->instance(LoginResponse::class, new class implements LoginResponse {
-            public function toResponse($request)
-            {
-                return redirect()->back();
-            }
         });
     }
 }
