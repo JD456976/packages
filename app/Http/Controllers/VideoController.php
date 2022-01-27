@@ -74,7 +74,7 @@ class VideoController extends Controller
 
         $video
             ->addMedia($request->file)
-            ->toMediaCollection();
+            ->toMediaCollection('videos');
 
         $video->save();
 
