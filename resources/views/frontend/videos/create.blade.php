@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        {!! Form::open(['route' => 'video.store', 'method' => 'post', 'id' => 'pms_login', 'name' => 'pms_login', 'files' => 'true']) !!}
+                        {!! Form::open(['route' => 'video.store', 'method' => 'post', 'id' => 'pms_login', 'name' => 'pms_login', 'files' => 'true', 'enctype' => 'multipart/form-data']) !!}
                         <h4>Upload Your Video</h4>
                         <p class="login-username">
                         {!! Form::label('title', 'Title', ['class' => 'input']) !!}
