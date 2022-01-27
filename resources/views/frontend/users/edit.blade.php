@@ -1,6 +1,6 @@
 <x-frontend.layout>
     <x-slot name="title">
-        {{ Auth::user()->name }} 's Profile
+        {{ Auth::user()->username }} 's Profile
     </x-slot>
     <!-- breadcrumb -->
     <div class="gen-breadcrumb" style="background-image: url('//images/background/asset-25.jpeg');">
@@ -10,7 +10,7 @@
                     <nav aria-label="breadcrumb">
                         <div class="gen-breadcrumb-title">
                             <h1>
-                                {{ Auth::user()->name }}'s Profile
+                                {{ Auth::user()->username }}'s Profile
                             </h1>
                         </div>
                     </nav>
