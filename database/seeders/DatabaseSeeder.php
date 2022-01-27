@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
-            VideoSeeder::class,
+            //VideoSeeder::class,
         ]);
     }
 }
