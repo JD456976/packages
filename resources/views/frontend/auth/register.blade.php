@@ -13,7 +13,7 @@
                         <h4>Sign Up</h4>
                         <p class="login-username">
                         {!! Form::label('username', 'Username', ['class' => 'input']) !!}
-                        {!! Form::email('username', old('username'), ['class' => 'input']) !!}
+                        {!! Form::text('username', old('username'), ['class' => 'input']) !!}
                         @error('username')
                         <div class="alert alert-danger alert-dismissible mb-2" role="alert">
                             <div class="d-flex align-items-center">
