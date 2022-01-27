@@ -70,8 +70,7 @@ class VideoController extends Controller
         $video->zip = $request->zip;
         $video->content = $request->content;
         $video->user_id = Auth::user()->id;
-
-        dd($request->file);
+        
 
         $video
             ->addMedia($request->file)
