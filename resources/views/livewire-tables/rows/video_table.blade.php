@@ -3,7 +3,7 @@
 </x-livewire-tables::table.cell>
 
 <x-livewire-tables::table.cell>
-    <a href="{{ route('admin.users.edit', $row->id) }}">{{ $row->user->name }}</a>
+    <a href="{{ route('admin.users.edit', $row->id) }}">{{ $row->user->username }}</a>
 </x-livewire-tables::table.cell>
 
 <x-livewire-tables::table.cell>
@@ -30,7 +30,7 @@
 
 <x-livewire-tables::table.cell>
     @if($row->is_approved == 0)
-        <a href="{{ route('admin.videos.unfeature', $row->id) }}"><span class="badge badge-glow bg-success">Approve</span>
+        <a href="{{ route('admin.videos.approve', $row->id) }}"><span class="badge badge-glow bg-success">Approve</span>
         </a>
     @endif
 </x-livewire-tables::table.cell>
