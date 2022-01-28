@@ -55,6 +55,7 @@ class VideoController extends Controller
      */
     public function store(VideoStoreRequest $request)
     {
+        dd($request);
         $video = new Video();
         $user = User::find(Auth::user())->first();
 
