@@ -11,7 +11,7 @@
                         <nav aria-label="breadcrumb">
                             <div class="gen-breadcrumb-title">
                                 <h1>
-                                    {{ Auth::user()->name }}'s Videos
+                                    {{ Auth::user()->username }}'s Videos
                                 </h1>
                             </div>
                         </nav>

@@ -11,7 +11,7 @@
         "cyrildewit/eloquent-viewable": "^6.0",
         "fruitcake/laravel-cors": "^2.0",
         "graham-campbell/exceptions": "^15.1",
-        "guzzlehttp/guzzle": "^7.0.1",
+        "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.2",
         "laravel/fortify": "^1.9",
         "laravel/framework": "^8.75",
