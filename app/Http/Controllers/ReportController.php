@@ -110,7 +110,7 @@ class ReportController extends Controller
     public function comment(ReportStoreRequest $request, $id)
     {
         $report = new Report();
-        $comment = Comment::find($id);;
+        $comment = Comment::find($id);
 
         $report->reason = $request->reason;
         $report->comment = $request->comment;

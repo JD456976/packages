@@ -10,7 +10,6 @@ use CyrildeWit\EloquentViewable\Contracts\Viewable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-use Spatie\Comments\Models\Concerns\HasComments;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -20,7 +19,7 @@ use \Venturecraft\Revisionable\RevisionableTrait;
 
 class Video extends Model implements Viewable, HasMedia
 {
-    use HasFactory, InteractsWithViews, Sluggable, Taggable, InteractsWithMedia, HasComments, Searchable, RevisionableTrait;
+    use HasFactory, InteractsWithViews, Sluggable, Taggable, InteractsWithMedia, Searchable, RevisionableTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -112,5 +111,15 @@ class Video extends Model implements Viewable, HasMedia
     public function report()
     {
         return $this->hasOne(Report::class, 'reportable_id');
+    }
+
+    public function comment()
+    {
+        return $this->hasOne(Comment::class, 'commentable_id');
+    }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
     }
 }

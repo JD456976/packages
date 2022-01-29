@@ -32,14 +32,14 @@
                             <div class="w-100">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-flex flex-row align-items-center">
-                                        <a href="{{ route('user.show', $comment->user->id) }}"><h6 style="color:black;" class="mr-2">{{ $comment->user->username }}</h6></a>
+                                        <a href="{{ route('user.show', $comment->user_id) }}"><h6 style="color:black;" class="mr-2">{{ $comment->user->username }}</h6></a>
 
                                     </div>
                                     <small>{{ $comment->created_at->diffForHumans() }}
                                         <a href="" data-toggle="modal" data-target="#reportCommentModal"><i class="fa fa-exclamation-triangle"></i></a></small>
                                 </div>
                                 <p style="color:black;" class="text-justify comment-text mb-0 border-bottom">
-                                    {{ $comment->text }}
+                                    {{ $comment->content }}
                                 </p>
                             </div>
                         </div>

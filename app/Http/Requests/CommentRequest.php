@@ -17,7 +17,6 @@ class CommentRequest extends FormRequest
     {
         return [
             'comment' => 'required|min:10',
-
         ];
     }
 }

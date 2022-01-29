@@ -18,4 +18,14 @@ class Comment extends Model
     {
         return $this->morphMany(Report::class, 'reportable');
     }
+
+    public function video()
+    {
+        return $this->belongsTo(Video::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -73,7 +73,7 @@ Route::get('search/{query}', [
     'uses' => 'App\Http\Controllers\VideoController@search',]);
 Route::post('comment/{comment}', [
     'as' => 'comment',
-    'uses' => 'App\Http\Controllers\VideoController@comment',])->middleware(['auth']);
+    'uses' => 'App\Http\Controllers\CommentController@store',])->middleware(['auth']);
 
 Route::post('report/video/{id}', [
     'as' => 'report.video',

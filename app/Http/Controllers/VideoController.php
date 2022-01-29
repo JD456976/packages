@@ -8,6 +8,7 @@ use App\Http\Requests\CommentRequest;
 use App\Http\Requests\VideoStoreRequest;
 use App\Http\Requests\VideoUpdateRequest;
 use App\Mail\CommentPosted;
+use App\Models\Comment;
 use App\Models\Report;
 use App\Models\User;
 use App\Models\Video;
@@ -55,7 +56,7 @@ class VideoController extends Controller
      */
     public function store(VideoStoreRequest $request)
     {
-       
+
         $video = new Video();
         $user = User::find(Auth::user())->first();
 
@@ -98,12 +99,11 @@ class VideoController extends Controller
      */
     public function show(Request $request, $slug)
     {
-
         $related = Video::isTagged()->get();
         $video = Video::where('slug', $slug)->first();
         $reported = Report::reported($video);
         $histories = $video->revisionHistory;
-        $comments = $video->comments;
+        $comments = Comment::where('commentable_id', $video->id)->get();
 
         views($video)->record();
 
@@ -170,20 +170,5 @@ class VideoController extends Controller
         $videos = Video::where('zip', $query)->get();
 
         return view('frontend.search', compact('videos', 'query'));
-    }
-
-    public function comment(CommentRequest $request, $video)
-    {
-        $video = Video::find($video);
-        $video->comment($request->comment);
-
-        if ($video->user->send_comments == 1)
-        {
-            Mail::to($video->user->email)->send(new CommentPosted($video));
-        }
-
-        Alert::success('Success', 'Comment Added!');
-
-        return redirect()->back();
     }
 }
