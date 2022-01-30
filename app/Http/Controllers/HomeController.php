@@ -25,7 +25,7 @@ class HomeController extends Controller
     {
         $query = $request->input('query');
 
-        $videos = Video::search($query)->take(10)->get();
+        $videos = Video::search($query)->where('is_approved',1)->take(10)->get();
 
         return view('frontend.search', compact('videos','query'));
     }
