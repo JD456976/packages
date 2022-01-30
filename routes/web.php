@@ -84,5 +84,3 @@ Route::post('report/comment/{id}', [
     'uses' => 'App\Http\Controllers\ReportController@comment',
 ]);
 Route::resource('report', App\Http\Controllers\ReportController::class);
-
-//

@@ -4,17 +4,16 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{ route('home') }}">
-                            <img style="height: 200px" class="img-fluid logo"  src="{{ asset('assets/frontend/images/PackageThievesLogo.png') }}" alt="streamlab-image">
-                        </a>
-
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <div id="gen-menu-contain" class="gen-menu-contain" style="font-size:28px;">
+                            <div id="gen-menu-contain" class="gen-menu-contain">
                                 <ul id="gen-main-menu" class="navbar-nav ml-auto">
                                     <li class="menu-item active">
                                         @can('is-admin')
                                         <a href="{{ route('admin.dashboard') }}" aria-current="page">Admin</a>
                                         @endcan
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('home') }}">Home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('video.index') }}">Videos</a>

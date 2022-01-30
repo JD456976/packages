@@ -2,9 +2,9 @@
     <x-slot name="title">
         {{ $video->title }}
     </x-slot>
-    <div class="container" style="margin-top: 100px;">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-12" style="margin-top: 100px;">
+            <div class="col-lg-12">
                 <div id="primary" class="content-area">
                     <article
                         class="post-1471 video type-video status-publish has-post-thumbnail hentry video_cat-tennis">
