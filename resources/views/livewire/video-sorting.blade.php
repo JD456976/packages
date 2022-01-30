@@ -1,6 +1,6 @@
 <div>
     <section class="gen-section-padding-3">
-        <div class="container" style="margin-top:100px;">
+        <div class="container">
             <div class="row justify-content-end mb-5">
                 <div class="col-lg-3 text-center mr-5">
                     <div class="sort-item ">
@@ -28,9 +28,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
-                        @if(count($videos) == 0)
-                            <h3>No videos with {{ $query }} found</h3>
-                        @endif
                         @foreach ($videos as $video)
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="gen-carousel-movies-style-2 movie-grid style-2">

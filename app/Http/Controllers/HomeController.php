@@ -39,21 +39,9 @@ class HomeController extends Controller
     {
         Mail::to('admin@packagethieves.com')->send(new ContactForm($request));
 
-        Alert::success('Thank You!', 'Your message has been!');
+        Alert::success('Thank You!', 'Your message has been sent!');
 
         return redirect(route('home'));
-    }
-
-    public function about()
-    {
-        $recent = Video::recent();
-        return view('frontend.about', compact('recent'));
-    }
-
-    public function faq()
-    {
-        $recent = Video::recent();
-        return view('frontend.page', compact('recent'));
     }
 
     public function page($slug)
