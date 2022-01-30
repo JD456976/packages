@@ -122,13 +122,4 @@ class Video extends Model implements Viewable, HasMedia
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
-
-    public function toSearchableArray()
-    {
-        $array = $this->toArray();
-
-       $array['is_approved'] = $this->video->is_approved;
-
-        return $array;
-    }
 }
