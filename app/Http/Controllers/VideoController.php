@@ -87,9 +87,9 @@ class VideoController extends Controller
 
         event(new VideoPosted($video));
 
-        Alert::success('Success','Video successfully added!');
+        Alert::success('Success','Video successfully added!')->autoClose(5000);
 
-        return redirect(route('video.show', $video->slug));
+        return redirect(route('video.index'));
     }
 
     /**
