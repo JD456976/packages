@@ -1,6 +1,5 @@
-<x-frontend.layout>
-    <x-slot name="title">
-        Error - 404
-    </x-slot>
-    asdfasf
-</x-frontend.layout>
+@extends('errors::minimal')
+
+@section('title', __('Not Found'))
+@section('code', '404')
+@section('message', __('Not Found'))
