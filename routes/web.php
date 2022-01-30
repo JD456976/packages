@@ -33,16 +33,6 @@ Route::get('contact', [
     'uses' => 'App\Http\Controllers\HomeController@showContact',
 ]);
 
-//Route::get('about', [
-//    'as' => 'about',
-//    'uses' => 'App\Http\Controllers\HomeController@about',
-//]);
-//
-//Route::get('faq', [
-//    'as' => 'faq',
-//    'uses' => 'App\Http\Controllers\HomeController@faq',
-//]);
-
 Route::get('page/{slug}', [
     'as' => 'page',
     'uses' => 'App\Http\Controllers\HomeController@page',
@@ -71,16 +61,19 @@ Route::get('video/tag/{tag}', [
 Route::get('search/{query}', [
     'as' => 'search',
     'uses' => 'App\Http\Controllers\VideoController@search',]);
-Route::post('comment/{comment}', [
-    'as' => 'comment',
-    'uses' => 'App\Http\Controllers\CommentController@store',])->middleware(['auth']);
 
-Route::post('report/video/{id}', [
-    'as' => 'report.video',
-    'uses' => 'App\Http\Controllers\ReportController@video',
-]);
-Route::post('report/comment/{id}', [
-    'as' => 'report.comment',
-    'uses' => 'App\Http\Controllers\ReportController@comment',
-]);
-Route::resource('report', App\Http\Controllers\ReportController::class);
+Route::middleware(['auth','verified'])->group(function () {
+    Route::post('comment/{comment}', [
+        'as' => 'comment',
+        'uses' => 'App\Http\Controllers\CommentController@store',]);
+
+    Route::post('report/video/{id}', [
+        'as' => 'report.video',
+        'uses' => 'App\Http\Controllers\ReportController@video',
+    ]);
+    Route::post('report/comment/{id}', [
+        'as' => 'report.comment',
+        'uses' => 'App\Http\Controllers\ReportController@comment',
+    ]);
+    Route::resource('report', App\Http\Controllers\ReportController::class);
+});
