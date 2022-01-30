@@ -1,6 +1,6 @@
 <x-frontend.layout>
     <x-slot name="title">
-        Welcome
+        PackageThieves
     </x-slot>
     <!-- owl-carousel Banner Start -->
     <section class="pt-0 pb-0">
