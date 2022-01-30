@@ -34,17 +34,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="widget">
-                            <h4 class="footer-title">Resources</h4>
-                            <div class="menu-about-container">
-                                <ul class="menu">
-                                    <li class="menu-item"><a href="">FAQ</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-xl-3  col-md-6">
                         <div class="widget">
                             <h4 class="footer-title">Our Partners</h4>
