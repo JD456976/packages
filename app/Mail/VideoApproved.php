@@ -32,6 +32,8 @@ class VideoApproved extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.videos.approved');
+        return $this->markdown('emails.videos.approved',[
+            'url' => route('video.show', $this->video->slug),
+        ]);
     }
 }

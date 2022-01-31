@@ -5,7 +5,7 @@ Hello,
 
 Your video was approved. Future uploads will automatically appear on the site. You can see your live video, by clicking the button below.
 
-@component('mail::button', ['url' => 'video/'.$video->slug])
+@component('mail::button', ['url' => $url])
 Your Video
 @endcomponent
 
