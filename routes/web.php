@@ -62,7 +62,7 @@ Route::get('search/{query}', [
     'as' => 'search',
     'uses' => 'App\Http\Controllers\VideoController@search',]);
 
-Route::middleware(['auth','verified:verification.notice'])->group(function () {
+Route::middleware(['auth','verified'])->group(function () {
     Route::post('comment/{comment}', [
         'as' => 'comment',
         'uses' => 'App\Http\Controllers\CommentController@store',]);
