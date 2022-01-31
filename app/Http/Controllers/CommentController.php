@@ -6,7 +6,6 @@ use App\Http\Requests\CommentRequest;
 use App\Mail\CommentPosted;
 use App\Models\Comment;
 use App\Models\Video;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -18,7 +17,7 @@ class CommentController extends Controller
         $comment = new Comment();
         $video = Video::find($id);
 
-        $comment->content = $request->comment;
+        $comment->content = $request->content;
         $comment->user_id = Auth::user()->id;
 
        $video->comments()->save($comment);
