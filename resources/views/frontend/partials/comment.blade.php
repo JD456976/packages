@@ -9,7 +9,7 @@
                     <div class="align-items-center p-3 form-color">
                         {!! Form::open(['route' => ['comment', $video->id], 'method' => 'post']) !!}
                         <div class="form-group">
-                            @error('comment')
+                            @error('content')
                             <div class="alert alert-danger alert-dismissible mb-2" role="alert">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">×</span>
@@ -20,7 +20,7 @@
                                 </div>
                             </div>
                             @enderror
-                            {!! Form::text('comment', old('comment'), ['class' => 'form-control', 'placeholder' => 'Add Your Comment']) !!}
+                            {!! Form::text('content', old('content'), ['class' => 'form-control', 'placeholder' => 'Add Your Comment']) !!}
                             {!! Form::submit('Add Comment', ['class' => 'btn btn-primary mt-2']) !!}
                         </div>
                         {!! Form::close() !!}
