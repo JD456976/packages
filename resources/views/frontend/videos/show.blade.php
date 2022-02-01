@@ -86,17 +86,7 @@
                                     </div>
                                     <div class="gen-socail-share">
                                         <h4 class="align-self-center">Social Share :</h4>
-                                        <ul class="social-inner">
-                                            <li><a target="_blank"
-                                                   href="www.facebook.com?share=http://preview.gentechtreedesign.com/streamlab/video/how-to-hit-the-perfect-tennis/"
-                                                   class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a target="_blank"
-                                                   href="#http://preview.gentechtreedesign.com/streamlab/video/how-to-hit-the-perfect-tennis/"
-                                                   class="facebook"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a target="_blank"
-                                                   href="#http://preview.gentechtreedesign.com/streamlab/video/how-to-hit-the-perfect-tennis/"
-                                                   class="facebook"><i class="fab fa-twitter"></i></a></li>
-                                        </ul>
+                                        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=610ed9c4640e160012f51483&product=inline-share-buttons' async='async'></script>
                                     </div>
                                     @can('is-admin')
                                     <div class="gen-socail-share">
