@@ -4,7 +4,7 @@ Hello Admin,
 
 A report was received:
 
-Item: {{ $item }}
+Item: {{ Str::remove('App\Models\\', $report->reportable_type) }}
 
 Reason: {{ $report->reason }}
 
