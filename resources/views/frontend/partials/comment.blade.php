@@ -39,7 +39,7 @@
                                         <a href="" data-toggle="modal" data-target="#reportCommentModal"><i class="fa fa-exclamation-triangle"></i></a></small>
                                 </div>
                                 <p style="color:black;" class="text-justify comment-text mb-0 border-bottom">
-                                    {{ $comment->content }}
+                                    {{ $comment->comment }}
                                 </p>
                             </div>
                         </div>
