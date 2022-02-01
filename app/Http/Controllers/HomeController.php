@@ -37,7 +37,7 @@ class HomeController extends Controller
 
     public function sendContact(ContactSentRequest $request)
     {
-        Mail::to('admin@packagethieves.com')->send(new ContactForm($request));
+        Mail::to('craig219@comcast.net')->send(new ContactForm($request));
 
         Alert::success('Thank You!', 'Your message has been sent!');
 

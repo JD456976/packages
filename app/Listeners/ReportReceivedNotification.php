@@ -28,6 +28,6 @@ class ReportReceivedNotification
      */
     public function handle(ReportReceivedEvent $event)
     {
-        Mail::to('admin@packagethieves.com')->send(new ReportReceived($event->report));
+        Mail::to('craig219@comcast.net')->send(new ReportReceived($event->report));
     }
 }
