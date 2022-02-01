@@ -14,7 +14,7 @@ class VideoStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string|max:20',
+            'title' => 'required|string|max:40',
             'zip' => 'required|numeric',
             'tags' => 'required',
             'g-recaptcha-response' => 'required|recaptcha:video'
