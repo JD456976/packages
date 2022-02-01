@@ -17,7 +17,7 @@ class CommentController extends Controller
         $comment = new Comment();
         $video = Video::find($id);
 
-        $comment->content = $request->content;
+        $comment->comment = $request->comment;
         $comment->user_id = Auth::user()->id;
 
        $video->comments()->save($comment);
