@@ -7,6 +7,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Auth;
 
 class CommentPosted extends Mailable
 {
@@ -31,10 +32,9 @@ class CommentPosted extends Mailable
      */
     public function build()
     {
-        $video = $this->video;
         return $this->markdown('emails.comments.posted',[
             'url' => route('video.show', $this->video->slug),
-            'button' => url('/user/'.$this->$video->user->id.'/edit')
+            'button' => route('user.edit', Auth::user()->id)
         ]);
     }
 }
