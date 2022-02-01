@@ -14,7 +14,7 @@ View Video
 
 Too many emails? Change your notification preferences in your profile:
 
-@component('mail::button', ['url' => , 'color' => 'error'])
+@component('mail::button', ['url' => $button, 'color' => 'error'])
     Your Profile
 @endcomponent
 
