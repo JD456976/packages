@@ -31,6 +31,10 @@ class ReportReceived extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.reports.received');
+        if ($this->report->reportable_type == 'App\Models\Video')
+            $item = route('video.show', $this->report->video->slug);
+        return $this->markdown('emails.reports.received',[
+            'item' => $item
+        ]);
     }
 }
