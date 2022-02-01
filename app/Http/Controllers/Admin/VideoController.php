@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Events\VideoApprovedEvent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminVideoUpdateRequest;
+use App\Mail\VideoFeaturedMail;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class VideoController extends Controller
@@ -106,6 +108,8 @@ class VideoController extends Controller
         $video->is_featured = 1;
 
         $video->update();
+
+        Mail::to($video->user->email)->send(new VideoFeaturedMail($video));
 
         Alert::success('Success!','Video Featured!');
 
