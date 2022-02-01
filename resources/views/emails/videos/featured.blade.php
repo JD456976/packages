@@ -1,5 +1,6 @@
 @component('mail::message')
 Hi,
+
 {{ $video->user->username }}
 
 A video you posted was just featured. Check it out:
