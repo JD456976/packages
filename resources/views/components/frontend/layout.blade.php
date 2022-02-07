@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V2MVKXFCQR"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-V2MVKXFCQR');
+</script>
 <head>
     <meta charset="utf-8">
     <meta name="keywords') }}" content="Streamlab - Video Streaming HTML5 Template" />

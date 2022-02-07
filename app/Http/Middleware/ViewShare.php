@@ -21,7 +21,7 @@ class ViewShare
         $mainMenu = Page::where('main_menu',1)->where('is_active',1)->get();
         View::share('mainMenu', $mainMenu);
 
-        //Main Menu
+        //Footer Menu
         $footerMenu = Page::where('footer_menu',1)->where('is_active',1)->get();
         View::share('footerMenu', $footerMenu);
 
